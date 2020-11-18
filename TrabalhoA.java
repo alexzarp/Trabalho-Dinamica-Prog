@@ -34,6 +34,8 @@ class Data {
   {
     if(dia < 31)
       this.dia = dia;
+    else
+      System.out.println("Insira um dia válido!");
   }
 
   public int getMes()
@@ -45,6 +47,8 @@ class Data {
   {
     if(mes < 12)
       this.mes = mes;
+    else
+      System.out.println("Insira um mês válido!");
   }
 
   public int getAno()
@@ -56,6 +60,8 @@ class Data {
   {
     if(ano > 0)
       this.ano = ano;
+    else
+      System.out.println("Insira um ano válido!");
   }
 
   public int getHora()
@@ -67,7 +73,9 @@ class Data {
   public void setHora(int hora)
   {
     if(hora < 12 && hora >= 0)
-    this.hora = hora;
+      this.hora = hora;
+    else
+      System.out.println("Insira uma hora válida!");
   }
   
   public int getMin()
@@ -79,6 +87,8 @@ class Data {
   {
     if(min < 60 && min > 0)
       this.min = min;
+    else
+      System.out.println("Insira um minuto válido!");
   }
 
     public int getSeg()
@@ -88,11 +98,16 @@ class Data {
 
   public void setSeg(int seg)
   {
-    this.seg = seg;
+    if(seg < 60)
+      this.seg = seg;
+    else
+      System.out.println("Insira um segundo válido!");
   }
   public int diferenca(Data x)
   {
-
+    int soma = 0;
+    soma = this.seg - x.seg;
+    soma += (this.min)
   }
 
   public boolAM()
@@ -103,5 +118,13 @@ class Data {
   public boolPM()
   {
     return hora >= 12;
+  }
+}
+
+public Main
+{
+  public static int main(String args[])
+  {
+    Data d = new Data(3, 4, 4, 5, 11, 2019);
   }
 }
