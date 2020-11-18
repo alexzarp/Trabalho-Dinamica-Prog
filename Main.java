@@ -1,10 +1,13 @@
 class Data {
-    int dia;
-    int mes;
-    int ano;
-    int hora;
-    int min;
-    int seg;
+    private int dia;
+    private int mes;
+    private int ano;
+    private int hora;
+    private int min;
+    private int seg;
+    
+  
+    public 
   }
   
   public class Evento
@@ -20,19 +23,13 @@ class Data {
     private bool verificaSeJaAconteceu(Data dataAtual)
     {
       if(this.ano > dataAtual.getAno())
-      {
-        return true;
-      } else if(this.mes > dataAtual.getMes())
-      {
-        return true;
-      } else if(this.dia > dataAtual.getDia())
-      {
-        return true;
-      } else if(this.hora > dataAtual.getHora())
-      {
-        return true;
-      }
+        if(this.mes > dataAtual.getMes())
+          if(this.dia > dataAtual.getDia())
+            if(this.hora > dataAtual.getHora())
+              return true;
+              
     return false;
+    }
   }
   
   class Main {
