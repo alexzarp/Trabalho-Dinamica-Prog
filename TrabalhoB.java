@@ -1,115 +1,166 @@
 import java.util.List;
 
-class Data {
-  private int dia;
-  private int mes;
-  private int ano;
-  private int hora;
-  private int min;
-  private int seg;
-
-  public Data(int seg, int min, int hora, int dia, int mes, int ano)
-  {
-    this.seg = setSeg(seg);
-    this.min = setMin(min);
-    this.hora = setHora(hora);
-    this.dia = setDia(dia);
-    this.mes = setMes(mes);
-    this.ano = setAno(ano);
-  }  
-
-  public int getDia()
-  {
-    return dia;
-  }
-
-  public void setDia(int dia)
-  {
-    if(dia < 31)
-      this.dia = dia;
-  }
-
-  public int getMes()
-  {
-    return mes;
-  }
-
-  public void setMes(int mes)
-  {
-    if(mes < 12)
-      this.mes = mes;
-  }
-
-  public int getAno()
-  {
-    return ano;
-  }
-
-  public void setAno(int ano)
-  {
-    if(ano > 0)
-      this.ano = ano;
-  }
-
-  public int getHora()
-  {
-
-      return hora;
-  }
-
-  public void setHora(int hora)
-  {
-    if(hora < 12 && hora > 0)
-    this.hora = hora;
-  }
+public class GuardaNumeros
+{
+  private List<Integer> numeros;
   
-  public int getMin()
+  public GuardaNumeros()
   {
-    return min;
+    this.numeros = new ArrayList<Integer>();
   }
 
-  public void setMin(int min)
+  public addicionaNumero(int num)
   {
-    if(min < 60 && min > 0)
-      this.min = min;
+    numeros.add(num);
   }
 
-    public int getSeg()
+  public float getMedia()
   {
-    return seg;
-  }
+    float media = 0;
+    for(int num : numeros)
+    {
+      media += (float) num;
+    }
 
-  public void setSeg(int seg)
+    media /= numeros.lenght;
+    return media;
+  }
+  public void printaNumeros()
   {
-    this.seg = seg;
-  }
-}
-
-class Main {
-  public static void main (String[] args) {
-    
-    /*int vet = new int[20];
-    int menor = 0;
-    int maior = 0;
-    for(int i=0;i>lenght.vetor;i++){
-      if(menor<vetor[i]){
-        menor = vetor[i];
+      for(int num : numeros)
+      {
+          System.out.println(num);
       }
-      if(maior>vetor[i]){
-        maior = vetor[i];
-      }*/
+  }
+
+  public int getMaior()
+  {
+    int maior = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(maior < num)
+            maior = num;
+    }
+    return maior;
+  }
+
+  public int getMenor()
+  {
+    int menor = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(menor < num)
+            menor = num;
+    }
+    return maior;
+  }
+  public int getPrimos()
+  {
+    int cont=0;
+    for(int num : numeros){
+        int count;
+        for (int j = 2; j < num;j++) {
+            
+            if (numero % j == 0)
+                
+     
+        }
+    cont++;
+
+                 
     }
   }
+}
+class At{
+    public static void main(String[] args) {
+        
+    }
+}
 
 
 public class GuardaNumeros
 {
-  private List<int> numeros;
+  private List<Integer> numeros;
   
   public GuardaNumeros()
   {
-    this.numeros = new ArrayList<int>();
+    this.numeros = new ArrayList<Integer>();
   }
 
-  public addNumero
+  public addicionaNumero(int num)
+  {
+    numeros.add(num);
+  }
+
+  public float getMedia()
+  {
+    float media = 0;
+    for(int num : numeros)
+    {
+      media += (float) num;
+    }
+
+    media /= numeros.lenght;
+    return media;
+  }
+  public void printaNumeros()
+  {
+      for(int num : numeros)
+      {
+          System.out.println(num);
+      }
+  }
+
+  public int getMaior()
+  {
+    int maior = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(maior < num)
+            maior = num;
+    }
+    return maior;
+  }
+
+  public int getMenor()
+  {
+    int menor = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(menor < num)
+            menor = num;
+    }
+    return maior;
+  }
+  public int getPrimos()
+  {
+    int cont=0;
+    for(int num : numeros){
+        for (int j = 2; j < num;j++) {
+            if(ehPrimo(numero))
+                cont++;
+        }
+    
+
+                 
+    }
+    return cont;
+  }
+
+
+  
+  public boolean ehPrimo(int numero) {
+    for (int j = 2; j < numero; j++) {
+        if (numero % j == 0)
+            return false;   
+        }
+        return true;
+    }
+  
+}
+
+class At{
+    public static void main(String[] args) {
+        
+    }
 }
