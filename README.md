@@ -1,1 +1,0 @@
-# Trabalho-Dinamica-Prog
