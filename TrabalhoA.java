@@ -1,5 +1,3 @@
-import java.util.List;
-
 class Data {
   private int dia;
   private int mes;
@@ -7,6 +5,15 @@ class Data {
   private int hora;
   private int min;
   private int seg;
+
+  public Data(int min, int hora, int dia, int mes, int ano)
+  {
+    this.min = setMin(min);
+    this.hora = setHora(hora);
+    this.dia = setDia(dia);
+    this.mes = setMes(mes);
+    this.ano = setAno(ano);
+  }  
 
   public Data(int seg, int min, int hora, int dia, int mes, int ano)
   {
@@ -59,7 +66,7 @@ class Data {
 
   public void setHora(int hora)
   {
-    if(hora < 12 && hora > 0)
+    if(hora < 12 && hora >= 0)
     this.hora = hora;
   }
   
@@ -83,10 +90,18 @@ class Data {
   {
     this.seg = seg;
   }
-}
+  public int diferenca(Data x)
+  {
 
-class TrabalhoA {
-  public static void main (String[] args) {
-      Data d1 = new Data(1, 4, 3, 14, 2019);
+  }
+
+  public boolAM()
+  {
+    return hora < 12;
+  }
+
+  public boolPM()
+  {
+    return hora >= 12;
   }
 }
