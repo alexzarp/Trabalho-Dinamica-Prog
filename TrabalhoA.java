@@ -107,7 +107,10 @@ class Data {
   {
     int soma = 0;
     soma = this.seg - x.seg;
-    soma += (this.min)
+    soma += (this.min - x.min)*60;
+    soma += (this.hora - x.hora)*3600;
+    soma += (this.dia - x.dia)*3600*24;
+    return soma;
   }
 
   public boolAM()
@@ -118,13 +121,5 @@ class Data {
   public boolPM()
   {
     return hora >= 12;
-  }
-}
-
-public Main
-{
-  public static int main(String args[])
-  {
-    Data d = new Data(3, 4, 4, 5, 11, 2019);
   }
 }
