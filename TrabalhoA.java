@@ -85,7 +85,7 @@ class Data {
   }
 }
 
-class Main {
+class TrabalhoA {
   public static void main (String[] args) {
     /*int vet = new int[20];
     int menor = 0;
@@ -108,14 +108,13 @@ class Main {
   
 }
 
-
 public class GuardaNumeros
 {
-  private List<int> numeros;
+  private List<Integer> numeros;
   
   public GuardaNumeros()
   {
-    this.numeros = new ArrayList<int>();
+    this.numeros = new ArrayList<Integer>();
   }
 
   public addicionaNumero(int num)
@@ -133,5 +132,34 @@ public class GuardaNumeros
 
     media /= numeros.lenght;
     return media;
+  }
+  public void printaNumeros()
+  {
+      for(int num : numeros)
+      {
+          System.out.println(num);
+      }
+  }
+
+  public int getMaior()
+  {
+    int maior = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(maior < num)
+            maior = num;
+    }
+    return maior;
+  }
+
+  public int getMenor()
+  {
+    int menor = numeros.get(0);
+    for(int num : numeros)
+    {
+        if(menor < num)
+            menor = num;
+    }
+    return maior;
   }
 }
